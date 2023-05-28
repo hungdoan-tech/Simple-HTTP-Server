@@ -4,9 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>simple_http_server</artifactId>
+    <groupId>com.ktd</groupId>
+    <artifactId>vivacon</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>vivacon</name>
+    <modules>
+        <module>vivacon-demo</module>
+        <module>vivacon-server</module>
+        <module>vivacon-framework</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

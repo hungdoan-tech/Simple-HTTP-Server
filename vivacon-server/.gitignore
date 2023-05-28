@@ -1,14 +1,13 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!vivacon-server/src/main/**/target/
-!vivacon-server/src/test/**/target/
+!**/src/main/**/target/
+!**/src/test/**/target/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
-.idea/
 *.iws
 *.iml
 *.ipr
@@ -29,8 +28,8 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!vivacon-server/src/main/**/build/
-!vivacon-server/src/test/**/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
