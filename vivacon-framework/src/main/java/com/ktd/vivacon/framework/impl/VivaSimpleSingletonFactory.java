@@ -129,7 +129,7 @@ public class VivaSimpleSingletonFactory
     @Override
     public Object getAnnotatedSingleton(Class annotationClass) {
         List list = getSingletons(annotationClass);
-        if (list.size() > 0) {
+        if (!list.isEmpty()) {
             return list.get(0);
         }
         return null;

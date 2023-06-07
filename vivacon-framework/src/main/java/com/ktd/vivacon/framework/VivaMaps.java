@@ -61,7 +61,7 @@ public final class VivaMaps {
                 .values()
                 .stream()
                 .flatMap(Collection::stream)
-                .collect(Collectors.toList());
+                .toList();
     }
     // =============================================
 
@@ -97,14 +97,14 @@ public final class VivaMaps {
             Map<K, V> origin,
             Function<K, K1> keyGenerator
     ) {
-        return newHashMap(origin, keyGenerator, (v) -> v);
+        return newHashMap(origin, keyGenerator, v -> v);
     }
 
     public static <K, V, V1> Map<K, V1> newHashMapNewValues(
             Map<K, V> origin,
             Function<V, V1> valueGenerator
     ) {
-        return newHashMap(origin, (k) -> k, valueGenerator);
+        return newHashMap(origin, k -> k, valueGenerator);
     }
 
     public static <K, V, M extends Map<K, V>> M newMap(K key, V value, M map) {
@@ -127,7 +127,7 @@ public final class VivaMaps {
     public static <K, V> List<V> getValues(Map<K, V> map, Predicate<V> predicate) {
         return map.values().stream()
                 .filter(predicate)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @SuppressWarnings("unchecked")
