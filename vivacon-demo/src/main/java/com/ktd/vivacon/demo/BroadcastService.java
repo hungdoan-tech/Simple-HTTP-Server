@@ -1,6 +1,6 @@
 package com.ktd.vivacon.demo;
 
-import com.ktd.vivacon.framework.Component;
+import com.ktd.vivacon.framework.annotation.Component;
 
 @Component
 public class BroadcastService {

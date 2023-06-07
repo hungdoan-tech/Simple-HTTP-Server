@@ -12,6 +12,14 @@
     <artifactId>vivacon-framework</artifactId>
     <name>vivacon-framework</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.tvd12</groupId>
+            <artifactId>reflections</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+    </dependencies>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

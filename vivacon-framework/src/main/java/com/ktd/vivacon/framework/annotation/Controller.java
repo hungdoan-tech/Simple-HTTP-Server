@@ -1,4 +1,4 @@
-package com.ktd.vivacon.framework;
+package com.ktd.vivacon.framework.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface Component {
+public @interface Controller {
     String name() default "";
 }

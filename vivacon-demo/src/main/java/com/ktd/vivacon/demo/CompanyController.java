@@ -1,7 +1,7 @@
 package com.ktd.vivacon.demo;
 
-import com.ktd.vivacon.framework.Controller;
-import com.ktd.vivacon.framework.RequestMapping;
+import com.ktd.vivacon.framework.annotation.Controller;
+import com.ktd.vivacon.framework.annotation.RequestMapping;
 
 @Controller
 @RequestMapping(path = "/")
