@@ -94,7 +94,7 @@ public class Request {
         if ("/".equals(path)) {
             path = "/index.html";
         }
-        return path != null && path.isEmpty() == false;
+        return path != null && !path.isEmpty();
     }
 
     private boolean consumeHeaders(BufferedReader bufferedReader, String initialLine) throws IOException {

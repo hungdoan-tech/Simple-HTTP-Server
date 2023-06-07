@@ -55,9 +55,9 @@ public class Response {
         try {
             headers.put("Connection", "Close");
             StringBuilder builder = new StringBuilder();
-            builder.append("HTTP/1.1 " + statusCode + " " + statusMessage + "\r\n");
+            builder.append("HTTP/1.1 ").append(statusCode).append(" ").append(statusMessage).append("\r\n");
             for (String headerName : headers.keySet()) {
-                builder.append(headerName + ": " + headers.get(headerName) + "\r\n");
+                builder.append(headerName).append(": ").append(headers.get(headerName)).append("\r\n");
             }
             if (body != null) {
                 builder.append("\r\n");

@@ -12,10 +12,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 public class SimpleIoCContainer {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -54,8 +51,8 @@ public class SimpleIoCContainer {
 
     private void doScanning(String packageName) {
         URL resource = this.getClass().getClassLoader().getResource(packageName.replaceAll("\\.", "/"));
-        File dir = new File(resource.getFile());
-        for (File file : dir.listFiles()) {
+        File dir = new File(Objects.requireNonNull(resource).getFile());
+        for (File file : Objects.requireNonNull(dir.listFiles())) {
             if (file.isDirectory()) {
                 logger.info("Scan in package " + packageName + "." + file.getName());
                 doScanning(packageName + "." + file.getName());
@@ -101,7 +98,7 @@ public class SimpleIoCContainer {
 
     private void doMappingPaths() {
         for (Map.Entry<String, Object> bean : iocContainer.entrySet()) {
-            Class<? extends Object> clazz = bean.getValue().getClass();
+            Class<?> clazz = bean.getValue().getClass();
 
             if (clazz.isAnnotationPresent(Controller.class)) {
                 String basePath = "";

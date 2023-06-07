@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.Socket;
+import java.util.Objects;
 
 public class SimpleDispatcher implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(SimpleDispatcher.class);
@@ -21,7 +22,7 @@ public class SimpleDispatcher implements Runnable {
         try {
             Request request = new Request(client);
             response = new Response(client);
-            if (request.parse() == false) {
+            if (!request.parse()) {
                 response.respond(400, "Bad request");
                 return;
             }
@@ -41,7 +42,7 @@ public class SimpleDispatcher implements Runnable {
 //        } catch (MethodHandlerNotFound e) {
 //            response.respond(403, "Method is not supported");
         } catch (Exception e) {
-            response.respond(500, "Internal server error");
+            Objects.requireNonNull(response).respond(500, "Internal server error");
         } finally {
             try {
                 client.close();
