@@ -15,7 +15,7 @@ public final class VivaArrayListSupplier implements VivaPrototypeSupplier {
     }
 
     /*@Override
-    public Object supply(EzyBeanContext context) {
+    public Object supply(VivaBeanContext context) {
         return new ArrayList<>();
     }*/
 

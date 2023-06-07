@@ -11,7 +11,7 @@ public interface VivaBeanContext extends
         VivaPropertyFetcher {
 
     String ACTIVE_PROFILES_KEY = "active_profiles";
-    String EZYFOX_ACTIVE_PROFILES_KEY = "ezyfox.active_profiles";
+    String VIVACON_ACTIVE_PROFILES_KEY = "vivacon.active_profiles";
 
     static VivaBeanContextBuilder builder() {
         return VivaSimpleBeanContext.builder();
