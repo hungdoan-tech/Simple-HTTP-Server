@@ -1,5 +1,7 @@
 package com.ktd.vivacon.framework;
 
+import com.ktd.vivacon.framework.impl.VivaBeanKey;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Set;

@@ -1,6 +1,5 @@
 package com.ktd.vivacon.framework.impl;
 
-import com.ktd.vivacon.framework.VivaBeanKey;
 import com.ktd.vivacon.framework.VivaBeanNameTranslator;
 
 import java.util.Map;
